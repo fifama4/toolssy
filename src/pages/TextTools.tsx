@@ -23,6 +23,17 @@ const TextTools = () => {
       <main>
         <TextToolsInterface />
         <TextToolsFeatures />
+        
+        {/* Bottom Ad Placeholder */}
+        <section className="py-8 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="p-6 bg-secondary/30 border-dashed border-2 border-border rounded-lg text-center">
+                <p className="text-sm text-muted-foreground">Advertisement Space - Footer Banner (728x90)</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
 

@@ -80,6 +80,12 @@ const TextToolsInterface = () => {
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-4 relative z-10">
+        {/* Top Ad Placeholder */}
+        <div className="max-w-5xl mx-auto mb-8">
+          <Card className="p-4 bg-secondary/30 border-dashed border-2 border-border text-center">
+            <p className="text-sm text-muted-foreground">Advertisement Space - Top Banner (728x90)</p>
+          </Card>
+        </div>
         {/* Hero Section */}
         <div className="text-center mb-12 animate-fade-in">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
@@ -197,6 +203,13 @@ const TextToolsInterface = () => {
                 />
               </div>
             )}
+          </Card>
+        </div>
+
+        {/* Middle Ad Placeholder */}
+        <div className="max-w-5xl mx-auto mt-12">
+          <Card className="p-6 bg-secondary/30 border-dashed border-2 border-border text-center">
+            <p className="text-sm text-muted-foreground">Advertisement Space - Middle Banner (970x250)</p>
           </Card>
         </div>
       </div>
