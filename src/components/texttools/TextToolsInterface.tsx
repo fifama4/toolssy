@@ -12,6 +12,7 @@ import {
   Space,
   ArrowUpDown,
 } from "lucide-react";
+import AdBanner from "@/components/AdBanner";
 
 const TextToolsInterface = () => {
   const [inputText, setInputText] = useState("");
@@ -80,11 +81,9 @@ const TextToolsInterface = () => {
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Top Ad Placeholder */}
+        {/* Top Ad Banner */}
         <div className="max-w-5xl mx-auto mb-8">
-          <Card className="p-4 bg-secondary/30 border-dashed border-2 border-border text-center">
-            <p className="text-sm text-muted-foreground">Advertisement Space - Top Banner (728x90)</p>
-          </Card>
+          <AdBanner />
         </div>
         {/* Hero Section */}
         <div className="text-center mb-12 animate-fade-in">
@@ -206,11 +205,9 @@ const TextToolsInterface = () => {
           </Card>
         </div>
 
-        {/* Middle Ad Placeholder */}
+        {/* Middle Ad Banner */}
         <div className="max-w-5xl mx-auto mt-12">
-          <Card className="p-6 bg-secondary/30 border-dashed border-2 border-border text-center">
-            <p className="text-sm text-muted-foreground">Advertisement Space - Middle Banner (970x250)</p>
-          </Card>
+          <AdBanner />
         </div>
       </div>
     </section>

@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PDFToolInterface from "@/components/pdftool/PDFToolInterface";
 import PDFToolFeatures from "@/components/pdftool/PDFToolFeatures";
+import AdBanner from "@/components/AdBanner";
 
 const PDFTool = () => {
   useEffect(() => {
@@ -13,10 +14,10 @@ const PDFTool = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "PDF Merge & Compress Tool",
+    "name": "Toolssy PDF Merge & Compress Tool",
     "description": "Combine multiple PDFs or reduce file size easily with our premium online tool. Fast, secure, and fully responsive.",
     "url": `${window.location.origin}/pdf-tool`,
-    "applicationCategory": "UtilitiesApplication",
+    "applicationCategory": "UtilityApplication",
     "operatingSystem": "Any",
     "offers": {
       "@type": "Offer",
@@ -27,8 +28,9 @@ const PDFTool = () => {
       "Merge multiple PDF files",
       "Compress PDF file size",
       "Drag and drop interface",
-      "Secure processing",
-      "No file size limits"
+      "Secure client-side processing",
+      "No file size limits",
+      "No uploads to server"
     ]
   };
 
@@ -40,13 +42,19 @@ const PDFTool = () => {
           name="description"
           content="Merge and compress PDFs easily using Toolssy's online PDF tool. Fast, secure, responsive, and free."
         />
-        <meta name="keywords" content="pdf merge, pdf compress, combine pdf, reduce pdf size, pdf tool, online pdf" />
+        <meta name="keywords" content="pdf merge, pdf compress, combine pdf, reduce pdf size, pdf tool, online pdf, merge pdf files, compress pdf online" />
+        
+        {/* Open Graph Tags */}
         <meta property="og:title" content="Toolssy – Online PDF Merge & Compress Tool" />
-        <meta
-          property="og:description"
-          content="Merge and compress PDFs easily using Toolssy's online PDF tool. Fast, secure, responsive, and free."
-        />
+        <meta property="og:description" content="Merge and compress PDFs easily using Toolssy's online PDF tool. Fast, secure, responsive, and free." />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${window.location.origin}/pdf-tool`} />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Toolssy – Online PDF Merge & Compress Tool" />
+        <meta name="twitter:description" content="Merge and compress PDFs easily with our free online tool." />
+        
         <link rel="canonical" href={`${window.location.origin}/pdf-tool`} />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
@@ -77,10 +85,24 @@ const PDFTool = () => {
 
           {/* Tool Interface */}
           <PDFToolInterface />
+          
+          {/* Middle Ad Banner */}
+          <section className="py-8 bg-background">
+            <div className="container mx-auto px-4">
+              <AdBanner />
+            </div>
+          </section>
 
           {/* Features Section */}
           <PDFToolFeatures />
         </main>
+        
+        {/* Bottom Ad Banner */}
+        <section className="py-8 bg-background">
+          <div className="container mx-auto px-4">
+            <AdBanner />
+          </div>
+        </section>
 
         <Footer />
       </div>

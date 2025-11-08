@@ -168,12 +168,6 @@ const WordCounterInterface = () => {
           </Card>
         </div>
 
-        {/* Ad Placeholder - Top */}
-        <div className="mt-12 max-w-5xl mx-auto">
-          <div className="bg-muted/30 border-2 border-dashed border-border rounded-lg p-8 text-center">
-            <p className="text-muted-foreground text-sm">Ad Placeholder</p>
-          </div>
-        </div>
       </div>
     </section>
   );
