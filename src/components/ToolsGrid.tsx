@@ -1,4 +1,4 @@
-import { Timer, FileText, QrCode, FileStack, Type } from "lucide-react";
+import { Timer, FileText, QrCode, FileStack, Type, TextCursorInput } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -38,6 +38,13 @@ const tools = [
     icon: Type,
     color: "from-primary/20 to-primary/5",
     link: "/file-converter",
+  },
+  {
+    name: "Text Tools",
+    description: "Transform text: uppercase, lowercase, remove spaces, and more",
+    icon: TextCursorInput,
+    color: "from-primary-light/20 to-primary-light/5",
+    link: "/text-tools",
   },
 ];
 

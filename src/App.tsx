@@ -9,6 +9,7 @@ import WordCounter from "./pages/WordCounter";
 import QRGenerator from "./pages/QRGenerator";
 import PDFTool from "./pages/PDFTool";
 import FileConverter from "./pages/FileConverter";
+import TextTools from "./pages/TextTools";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/qr-generator" element={<QRGenerator />} />
           <Route path="/pdf-tool" element={<PDFTool />} />
           <Route path="/file-converter" element={<FileConverter />} />
+          <Route path="/text-tools" element={<TextTools />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
