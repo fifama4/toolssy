@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Timer from "./pages/Timer";
 import WordCounter from "./pages/WordCounter";
 import QRGenerator from "./pages/QRGenerator";
+import PDFTool from "./pages/PDFTool";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/timer" element={<Timer />} />
           <Route path="/word-counter" element={<WordCounter />} />
           <Route path="/qr-generator" element={<QRGenerator />} />
+          <Route path="/pdf-tool" element={<PDFTool />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
