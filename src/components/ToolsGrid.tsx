@@ -33,11 +33,11 @@ const tools = [
     link: "/pdf-tool",
   },
   {
-    name: "Text Converter",
-    description: "Transform text case, format, and encoding instantly",
+    name: "File Converter",
+    description: "Convert PDF, JPG, PNG, and other formats instantly",
     icon: Type,
     color: "from-primary/20 to-primary/5",
-    link: "#",
+    link: "/file-converter",
   },
 ];
 
