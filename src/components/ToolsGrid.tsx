@@ -1,6 +1,7 @@
 import { Timer, FileText, QrCode, FileStack, Type } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 const tools = [
   {
@@ -8,30 +9,35 @@ const tools = [
     description: "Set precise countdowns and stopwatches for any task",
     icon: Timer,
     color: "from-primary/20 to-primary/5",
+    link: "/timer",
   },
   {
     name: "Word Counter",
     description: "Count words, characters, and analyze your text instantly",
     icon: FileText,
     color: "from-primary-light/20 to-primary-light/5",
+    link: "#",
   },
   {
     name: "QR Generator",
     description: "Create custom QR codes for links, text, and more",
     icon: QrCode,
     color: "from-primary/20 to-primary/5",
+    link: "#",
   },
   {
     name: "PDF Merge",
     description: "Combine multiple PDF files into one document easily",
     icon: FileStack,
     color: "from-primary-light/20 to-primary-light/5",
+    link: "#",
   },
   {
     name: "Text Converter",
     description: "Transform text case, format, and encoding instantly",
     icon: Type,
     color: "from-primary/20 to-primary/5",
+    link: "#",
   },
 ];
 
@@ -79,12 +85,14 @@ const ToolsGrid = () => {
                 </p>
 
                 {/* Button */}
-                <Button
-                  className="w-full group/btn relative overflow-hidden bg-primary hover:bg-primary-dark text-primary-foreground shadow-premium-sm hover:shadow-premium-md transition-all duration-300"
-                >
-                  <span className="relative z-10">Use Now</span>
-                  <span className="absolute inset-0 bg-primary-light scale-0 group-hover/btn:scale-100 transition-transform duration-500"></span>
-                </Button>
+                <Link to={tool.link}>
+                  <Button
+                    className="w-full group/btn relative overflow-hidden bg-primary hover:bg-primary-dark text-primary-foreground shadow-premium-sm hover:shadow-premium-md transition-all duration-300"
+                  >
+                    <span className="relative z-10">Use Now</span>
+                    <span className="absolute inset-0 bg-primary-light scale-0 group-hover/btn:scale-100 transition-transform duration-500"></span>
+                  </Button>
+                </Link>
               </div>
 
               {/* Decorative Corner */}
