@@ -23,7 +23,7 @@ const tools = [
     description: "Create custom QR codes for links, text, and more",
     icon: QrCode,
     color: "from-primary/20 to-primary/5",
-    link: "#",
+    link: "/qr-generator",
   },
   {
     name: "PDF Merge",
