@@ -16,7 +16,7 @@ const tools = [
     description: "Count words, characters, and analyze your text instantly",
     icon: FileText,
     color: "from-primary-light/20 to-primary-light/5",
-    link: "#",
+    link: "/word-counter",
   },
   {
     name: "QR Generator",
