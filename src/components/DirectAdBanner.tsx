@@ -28,16 +28,28 @@ const DirectAdBanner = ({ adId }: DirectAdBannerProps) => {
       // Create the invoke script
       const invokeScript = document.createElement("script");
       invokeScript.type = "text/javascript";
-      invokeScript.src = "//www.highperformanceformat.com/2f22910538b32dc11b54e6abb18c5eca/invoke.js";
-      invokeScript.async = true;
+      invokeScript.src = "https://www.highperformanceformat.com/2f22910538b32dc11b54e6abb18c5eca/invoke.js";
+      // Ensure execution order and better compatibility
+      ;(invokeScript as any).async = false;
+      invokeScript.referrerPolicy = "no-referrer-when-downgrade";
       
       // Add onload handler for debugging
       invokeScript.onload = () => {
-        console.log(`✅ Ad script loaded successfully for ${adId}`);
+        console.log(`✅ Ad script loaded successfully for ${adId}`, invokeScript.src);
       };
       
+      // One retry with cache-busting if it fails
+      let retried = false;
       invokeScript.onerror = () => {
-        console.error(`❌ Failed to load ad script for ${adId}`);
+        if (!retried) {
+          retried = true;
+          const base = "https://www.highperformanceformat.com/2f22910538b32dc11b54e6abb18c5eca/invoke.js";
+          const retrySrc = `${base}?cb=${Date.now()}`;
+          console.warn(`⚠️ Retry loading ad script for ${adId}:`, retrySrc);
+          invokeScript.src = retrySrc;
+          return;
+        }
+        console.error(`❌ Failed to load ad script for ${adId}`, invokeScript.src);
       };
 
       // Append scripts to container
