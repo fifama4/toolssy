@@ -5,7 +5,7 @@ import Hero from "@/components/Hero";
 import ToolsGrid from "@/components/ToolsGrid";
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";
-import AdBanner from "@/components/AdBanner";
+import DirectAdBanner from "@/components/DirectAdBanner";
 
 const Index = () => {
   useEffect(() => {
@@ -61,7 +61,7 @@ const Index = () => {
         {/* Top Ad Banner */}
         <div className="pt-20 bg-background">
           <div className="container mx-auto px-4 py-4">
-            <AdBanner />
+            <DirectAdBanner adId="home-top" />
           </div>
         </div>
 
@@ -74,7 +74,7 @@ const Index = () => {
         {/* Bottom Ad Banner */}
         <section className="py-8 bg-background">
           <div className="container mx-auto px-4">
-            <AdBanner />
+            <DirectAdBanner adId="home-bottom" />
           </div>
         </section>
         

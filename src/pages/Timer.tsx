@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TimerInterface from "@/components/timer/TimerInterface";
 import TimerFeatures from "@/components/timer/TimerFeatures";
-import AdBanner from "@/components/AdBanner";
+import DirectAdBanner from "@/components/DirectAdBanner";
 
 const Timer = () => {
   useEffect(() => {
@@ -67,7 +67,7 @@ const Timer = () => {
         {/* Top Ad Banner */}
         <div className="pt-20 bg-background">
           <div className="container mx-auto px-4 py-4">
-            <AdBanner />
+            <DirectAdBanner adId="timer-top" />
           </div>
         </div>
 
@@ -79,7 +79,7 @@ const Timer = () => {
         {/* Bottom Ad Banner */}
         <section className="py-8 bg-background">
           <div className="container mx-auto px-4">
-            <AdBanner />
+            <DirectAdBanner adId="timer-bottom" />
           </div>
         </section>
         
