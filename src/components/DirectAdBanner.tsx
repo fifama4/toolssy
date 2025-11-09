@@ -19,7 +19,7 @@ const DirectAdBanner = ({ adId }: DirectAdBannerProps) => {
       const configScript = document.createElement("script");
       configScript.type = "text/javascript";
       configScript.innerHTML = `
-        window.${configVarName} = {
+        window['${configVarName}'] = {
           'key': '5e09a783462a2bb5ff8eff1447398ae1',
           'format': 'iframe',
           'height': 90,
@@ -27,7 +27,7 @@ const DirectAdBanner = ({ adId }: DirectAdBannerProps) => {
           'params': {}
         };
         if (typeof atOptions === 'undefined') {
-          atOptions = window.${configVarName};
+          atOptions = window['${configVarName}'];
         }
       `;
 
