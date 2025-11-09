@@ -12,29 +12,23 @@ const DirectAdBanner = ({ adId }: DirectAdBannerProps) => {
     if (scriptsLoadedRef.current || !containerRef.current) return;
 
     try {
-      // Create unique variable name for this ad instance
-      const configVarName = `atOptions_${adId}`;
-      
       // Create the ad configuration script
       const configScript = document.createElement("script");
       configScript.type = "text/javascript";
       configScript.innerHTML = `
-        window['${configVarName}'] = {
-          'key': '5e09a783462a2bb5ff8eff1447398ae1',
+        atOptions = {
+          'key': '2f22910538b32dc11b54e6abb18c5eca',
           'format': 'iframe',
           'height': 90,
           'width': 728,
           'params': {}
         };
-        if (typeof atOptions === 'undefined') {
-          atOptions = window['${configVarName}'];
-        }
       `;
 
       // Create the invoke script
       const invokeScript = document.createElement("script");
       invokeScript.type = "text/javascript";
-      invokeScript.src = "//www.highperformanceformat.com/5e09a783462a2bb5ff8eff1447398ae1/invoke.js";
+      invokeScript.src = "//www.highperformanceformat.com/2f22910538b32dc11b54e6abb18c5eca/invoke.js";
       invokeScript.async = true;
       
       // Add onload handler for debugging
