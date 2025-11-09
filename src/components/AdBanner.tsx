@@ -18,7 +18,7 @@ const AdBanner = ({ className = "" }: AdBannerProps) => {
       configScript.type = "text/javascript";
       configScript.innerHTML = `
         atOptions = {
-          'key' : 'c690d55001791227fe99a909a8823bbd',
+          'key' : '5e09a783462a2bb5ff8eff1447398ae1',
           'format' : 'iframe',
           'height' : 90,
           'width' : 728,
@@ -29,7 +29,7 @@ const AdBanner = ({ className = "" }: AdBannerProps) => {
       // Create the ad script
       const adScript = document.createElement("script");
       adScript.type = "text/javascript";
-      adScript.src = "//www.highperformanceformat.com/c690d55001791227fe99a909a8823bbd/invoke.js";
+      adScript.src = "//www.highperformanceformat.com/5e09a783462a2bb5ff8eff1447398ae1/invoke.js";
       adScript.async = true;
 
       // Append scripts to the container
