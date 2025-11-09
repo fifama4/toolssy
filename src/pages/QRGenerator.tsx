@@ -65,16 +65,16 @@ const QRGenerator = () => {
 
       <div className="min-h-screen bg-background">
         <Header />
+        
+        {/* Top Ad Banner */}
+        <div className="pt-20 bg-background">
+          <div className="container mx-auto px-4 py-4">
+            <AdBanner />
+          </div>
+        </div>
+
         <main>
           <QRGeneratorInterface />
-          
-          {/* Middle Ad Banner */}
-          <section className="py-8 bg-background">
-            <div className="container mx-auto px-4">
-              <AdBanner />
-            </div>
-          </section>
-          
           <QRGeneratorFeatures />
         </main>
         

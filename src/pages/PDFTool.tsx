@@ -64,7 +64,14 @@ const PDFTool = () => {
       <div className="min-h-screen flex flex-col bg-background">
         <Header />
         
-        <main className="flex-grow pt-20">
+        {/* Top Ad Banner */}
+        <div className="pt-20 bg-background">
+          <div className="container mx-auto px-4 py-4">
+            <AdBanner />
+          </div>
+        </div>
+        
+        <main className="flex-grow">
           {/* Hero Section */}
           <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-primary/5 py-20 md:py-32">
             {/* Background Decoration */}
@@ -85,13 +92,6 @@ const PDFTool = () => {
 
           {/* Tool Interface */}
           <PDFToolInterface />
-          
-          {/* Middle Ad Banner */}
-          <section className="py-8 bg-background">
-            <div className="container mx-auto px-4">
-              <AdBanner />
-            </div>
-          </section>
 
           {/* Features Section */}
           <PDFToolFeatures />

@@ -68,14 +68,6 @@ const Index = () => {
         <main>
           <Hero />
           <ToolsGrid />
-          
-          {/* Middle Ad Banner */}
-          <section className="py-8 bg-background">
-            <div className="container mx-auto px-4">
-              <AdBanner />
-            </div>
-          </section>
-          
           <Features />
         </main>
         
